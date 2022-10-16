@@ -2,20 +2,20 @@ from math import modf
 from numpy import ndarray, array, append
 
 
-def min_to_dec(minutes):
+def min_to_dec(minutes: int) -> float:
     return minutes/60
 
 
-def dec_to_min(decimal):
+def dec_to_min(decimal: float) -> int:
     return int(decimal * 60)
 
-
+# TODO add type hints
 def time_formatter(time):
     if isinstance(time, int) or isinstance(time, float):
         minutes, hours = modf(time)
         minutes = round(minutes, 2)
         return str(int(hours)).zfill(2) + ':' + str(int(dec_to_min(minutes))).zfill(2)
-    elif isinstance(time, ndarray):
+    elif isinstance(time, (list, ndarray)):
         label_array = array([])
         for elt in time:
             minutes, hours = modf(elt)

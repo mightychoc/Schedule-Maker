@@ -1,3 +1,4 @@
+# A nice printer function
 def headline(text: str, align: bool = True) -> str:
 
     if align:
