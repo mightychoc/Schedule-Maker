@@ -4,7 +4,7 @@ The two main packages involved are _matplotlib_ and _tkinter_.
 
 # To do
 - **General**
-  - [ ] Add type hints to existing functions
+  - [ ] Add type hints
   - [ ] Write tests for existing functions
 - **CalendarGrid**
   - [ ] Implement half-hour setting for the grid
@@ -14,6 +14,8 @@ The two main packages involved are _matplotlib_ and _tkinter_.
 - **Calendar**
   - [ ] Implement removal of entries
   - [ ] Make multiple entries at same time possible
+  - [ ] Make export and import of the entries-list possible
+  - [ ] Automatically generate edge color of rectangle
 - **CalendarEntry**
   - [ ]
 

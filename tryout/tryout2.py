@@ -1,4 +1,4 @@
-from CalendarGrid import CalendarGrid
+from Calendar import Calendar
 from CalendarEntry import CalendarEntry
 from matplotlib.patches import Rectangle
 
@@ -10,13 +10,11 @@ entries = [
 ]
 
 
-sorted_entries = sorted(entries, key=lambda ent: (ent.day, ent.start))
+# We can add and remove entries -> part of GUI application!
+calendargrid = Calendar()
 
-for i in sorted_entries:
-    print(i)
+for entry in entries:
+    calendargrid.add_entry(entry)
 
-
-
-
-
-
+calendargrid.remove_entry(calendargrid.entry_list[entries[0].id])
+calendargrid.show()
